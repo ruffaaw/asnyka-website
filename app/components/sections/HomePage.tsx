@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
     <SectionWrapper
       id="home"
-      className="min-h-screen grid grid-cols-2 pt-27 pl-20 pr-20 overflow-hidden bg-white"
+      className="h-screen grid grid-cols-2 pt-27 pl-20 pr-20 overflow-hidden bg-white"
     >
       <div className="flex flex-col justify-center py-20 pl-20 pr-16 relative z-10">
         <p className="text-[0.72rem] uppercase text-green-mid mb-5 flex items-center gap-3 tracking-[0.22em] before:content-[''] before:block before:w-9 before:h-px before:bg-green-mid">
@@ -44,41 +44,40 @@ export default function HomePage() {
           </a>
         </div>
       </div>
+      <div className="flex flex-col justify-center items-center gap-8 py-10 pr-10">
+        <div className="relative">
+          <div className="absolute -bottom-3 -right-3 w-full h-full border border-green-mid/30 rounded-sm" />
 
-      <div className="flex flex-col justify-center overflow-hidden">
-        <div className="relative h-fit max-h-[60vh]">
           <Image
             src="/rzut_kwadratowy.webp"
             alt="Osiedle Zielona Polana"
-            width={600}
-            height={600}
-            className="object-cover w-full h-full"
+            width={500}
+            height={500}
+            className="relative z-10 object-contain w-full max-w-150 rounded-sm"
             priority
             unoptimized
           />
         </div>
 
-        <div className="h-1/5 flex flex-col items-center justify-center gap-6 px-10 py-3.25">
-          <div className="flex gap-4">
-            {[
-              { num: "24", label: "Domy w ofercie" },
-              { num: "2026", label: "Rok oddania" },
-            ].map(({ num, label }) => (
-              <div
-                key={label}
-                className="bg-green-deep/15 border border-green-deep/35 backdrop-blur-sm rounded-sm px-7 py-5 text-center text-green-deep"
-              >
-                <div className="font-mono text-[2.8rem] font-light leading-none">
-                  {num}
-                </div>
-                <div className="text-[0.72rem] tracking-[0.15em] uppercase opacity-80 mt-1">
-                  {label}
-                </div>
+        <div className="flex gap-4 w-full justify-center">
+          {[
+            { num: "24", label: "Domy w ofercie" },
+            { num: "2026", label: "Rok oddania" },
+          ].map(({ num, label }) => (
+            <div
+              key={label}
+              className="bg-green-deep/15 border border-green-deep/35 backdrop-blur-sm rounded-sm px-7 py-5 text-center text-green-deep"
+            >
+              <div className="font-mono text-[2.8rem] font-light leading-none">
+                {num}
               </div>
-            ))}
-          </div>
+              <div className="text-[0.72rem] tracking-[0.15em] uppercase opacity-80 mt-1">
+                {label}
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
+      </div>{" "}
     </SectionWrapper>
   );
 }
