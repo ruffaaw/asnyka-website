@@ -1,5 +1,6 @@
 import Header from "./components/layout/Header";
 import Navbar from "./components/layout/Navbar";
+import HomePage from "./components/sections/HomePage";
 
 export default function Home() {
   return (
@@ -8,7 +9,9 @@ export default function Home() {
         <Header />
         <Navbar />
       </div>
-      <main className="font-sans"></main>
+      <main className="font-sans">
+        <HomePage />
+      </main>
     </>
   );
 }
