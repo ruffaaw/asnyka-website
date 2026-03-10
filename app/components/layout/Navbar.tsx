@@ -2,7 +2,7 @@ import { House } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <nav className="flex px-12 py-3.5 justify-between font-sans bg-cream border-b-[1] border-green-pale">
+    <nav className="flex px-12 py-3.5 justify-between font-sans bg-white border-b-[1] border-green-pale">
       <div className="w-1/4 flex gap-3 ">
         <div className="p-3 bg-green-deep rounded-full">
           <House className="text-cream w-6 h-6" />
