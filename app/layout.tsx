@@ -12,6 +12,12 @@ const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
 });
 
+const cormorantGaramondItalic = Cormorant_Garamond({
+  variable: "--font-cormorant-garamond-italic",
+  subsets: ["latin"],
+  style: "italic",
+});
+
 export const metadata: Metadata = {
   title: "Asnyka",
   description: "Asnyka",
