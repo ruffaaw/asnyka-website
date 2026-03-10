@@ -12,7 +12,7 @@ export default function SectionWrapper({
   className = "",
 }: SectionWrapperProps) {
   return (
-    <section id={id} className={`flex px-12 ${className}`}>
+    <section id={id} className={`flex py-25 px-20 ${className}`}>
       {children}
     </section>
   );
