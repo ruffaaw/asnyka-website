@@ -1,5 +1,6 @@
 import Header from "./components/layout/Header";
 import Navbar from "./components/layout/Navbar";
+import AboutInvestmentPage from "./components/sections/AboutInvestmentPage";
 import HomePage from "./components/sections/HomePage";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       </div>
       <main className="font-sans">
         <HomePage />
+        <AboutInvestmentPage />
       </main>
     </>
   );
