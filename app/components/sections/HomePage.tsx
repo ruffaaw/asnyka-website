@@ -8,17 +8,17 @@ export default function HomePage() {
       className="h-screen grid grid-cols-2 pt-27 pl-20 pr-20 overflow-hidden bg-white"
     >
       <div className="flex flex-col justify-center py-20 pl-20 pr-16 relative z-10">
-        <p className="text-[0.72rem] uppercase text-green-mid mb-5 flex items-center gap-3 tracking-[0.22em] before:content-[''] before:block before:w-9 before:h-px before:bg-green-mid">
+        <h1 className="text-[0.72rem] uppercase text-green-mid mb-5 flex items-center gap-3 tracking-[0.22em] before:content-[''] before:block before:w-9 before:h-px before:bg-green-mid">
           Nowa inwestycja • Małopolska
-        </p>
+        </h1>
 
-        <h1 className="font-mono text-[clamp(3rem,5vw,5.5rem)] font-light leading-[1.08] text-green-deep mb-7">
+        <h2 className="font-mono text-[clamp(3rem,5vw,5.5rem)] font-light leading-[1.08] text-green-deep mb-7">
           Żyj blisko
           <br />
           <em className="italic text-green-mid">natury,</em>
           <br />
           dalej od zgiełku
-        </h1>
+        </h2>
 
         <p className="text-base leading-[1.75] text-text-mid max-w-119 mb-12">
           Osiedle Zielona Polana to 24 domy jednorodzinne otoczone lasem
