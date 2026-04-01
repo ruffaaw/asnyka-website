@@ -3,6 +3,7 @@ import Navbar from "./components/layout/Navbar";
 import AboutInvestmentPage from "./components/sections/AboutInvestmentPage";
 import GalleryPage from "./components/sections/GalleryPage";
 import HomePage from "./components/sections/HomePage";
+import HousesPage from "./components/sections/HousesPage";
 import LocalizationPage from "./components/sections/LocalizationPage";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         <AboutInvestmentPage />
         <GalleryPage />
         <LocalizationPage />
+        <HousesPage />
       </main>
     </>
   );

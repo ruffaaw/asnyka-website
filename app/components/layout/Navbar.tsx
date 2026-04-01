@@ -22,7 +22,7 @@ export default function Navbar() {
             { href: "#opis-inwestycji", label: "Opis inwestycji" },
             { href: "#galeria", label: "Galeria" },
             { href: "#lokalizacja", label: "Lokalizacja" },
-            { href: "#domy", label: "Domy" },
+            { href: "#lokale", label: "Lokale" },
             { href: "#wykonczenie", label: "Wykończenie" },
             { href: "#o-deweloperze", label: "O deweloperze" },
             { href: "#kontakt", label: "Kontakt" },
