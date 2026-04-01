@@ -16,8 +16,8 @@ export default function GalleryPage() {
 
   return (
     <SectionWrapper
-      id="opis-inwestycji"
-      className="bg-green-deep flex-col gap-10"
+      id="galeria"
+      className="bg-green-deep flex-col gap-10 scroll-mt-26.5"
     >
       <h1 className="text-base uppercase text-green-light mb-5 flex items-center gap-3 leading-[1.8] tracking-[0.22em] before:content-[''] before:block before:w-9 before:h-px before:bg-green-light">
         galeria

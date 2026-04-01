@@ -6,7 +6,7 @@ export default function LocalizationPage() {
   return (
     <SectionWrapper
       id="lokalizacja"
-      className="bg-white flex-row items-center justify-between gap-20 w-full h-full"
+      className="bg-white flex-row items-center justify-between gap-20 scroll-mt-26.5"
     >
       <div className="relative flex items-center justify-center aspect-square w-full max-w-2xl">
         <Image
