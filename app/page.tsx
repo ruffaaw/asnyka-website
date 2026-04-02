@@ -1,6 +1,7 @@
 import Header from "./components/layout/Header";
 import Navbar from "./components/layout/Navbar";
 import AboutInvestmentPage from "./components/sections/AboutInvestmentPage";
+import FinishPage from "./components/sections/FinishPage";
 import GalleryPage from "./components/sections/GalleryPage";
 import HomePage from "./components/sections/HomePage";
 import HousesPage from "./components/sections/HousesPage";
@@ -19,6 +20,7 @@ export default function Home() {
         <GalleryPage />
         <LocalizationPage />
         <HousesPage />
+        <FinishPage />
       </main>
     </>
   );
