@@ -8,7 +8,7 @@ export default function HousesPage() {
       id="lokale"
       className="bg-cream flex-col justify-center items-start scroll-mt-26.5"
     >
-      <h1 className="text-sm uppercase text-text-mid mb-4 flex items-center gap-3 leading-[1.8] tracking-[0.22em] before:content-[''] before:block before:w-9 before:h-px before:bg-text-mid">
+      <h1 className="text-[12px] uppercase text-text-mid mb-4 flex items-center gap-3 leading-[1.8] tracking-[0.22em] before:content-[''] before:block before:w-9 before:h-px before:bg-text-mid">
         oferta
       </h1>
 
