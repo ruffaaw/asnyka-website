@@ -2,6 +2,7 @@ import Header from "./components/layout/Header";
 import Navbar from "./components/layout/Navbar";
 import AboutDeveloperPage from "./components/sections/AboutDeveloperPage";
 import AboutInvestmentPage from "./components/sections/AboutInvestmentPage";
+import ContactPage from "./components/sections/ContactPage";
 import FinishPage from "./components/sections/FinishPage";
 import GalleryPage from "./components/sections/GalleryPage";
 import HomePage from "./components/sections/HomePage";
@@ -23,6 +24,7 @@ export default function Home() {
         <HousesPage />
         <FinishPage />
         <AboutDeveloperPage />
+        <ContactPage />
       </main>
     </>
   );
