@@ -1,3 +1,4 @@
+import Footer from "./components/layout/Footer";
 import Header from "./components/layout/Header";
 import Navbar from "./components/layout/Navbar";
 import AboutDeveloperPage from "./components/sections/AboutDeveloperPage";
@@ -25,6 +26,7 @@ export default function Home() {
         <FinishPage />
         <AboutDeveloperPage />
         <ContactPage />
+        <Footer />
       </main>
     </>
   );
