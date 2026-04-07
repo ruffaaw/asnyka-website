@@ -20,9 +20,9 @@ export default function FinishPage() {
       className="bg-white flex-col scroll-mt-26.5"
     >
       <h1 className="text-[12px] uppercase text-text-mid mb-5 flex items-center gap-3 leading-[1.8] tracking-[0.22em] before:content-[''] before:block before:w-9 before:h-px before:bg-text-mid">
-        Lokalizacja
+        Wykończenie
       </h1>
-      <div className="flex flex-row items-center w-full gap-25">
+      <div className="flex flex-col lg:flex-row items-center w-full gap-10 lg:gap-25">
         <div className="flex flex-col w-full">
           <h2 className="font-mono text-[clamp(2rem,3.5vw,3rem)] font-light leading-[1.15] text-green-deep mb-6">
             W&nbsp;sercu <em className="italic text-green-mid">Małopolski</em>

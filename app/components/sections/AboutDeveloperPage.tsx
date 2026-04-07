@@ -14,7 +14,7 @@ export default function AboutDeveloperPage() {
         Polana Invest&nbsp;
         <em className="italic text-green-mid">Sp.&nbsp;z&nbsp;o.o.</em>
       </h2>
-      <p className="text-base text-text-mid leading-[1.8] max-w-155 text-center mb-16">
+      <p className="text-base text-text-mid leading-[1.8] max-w-155 text-center mb-10">
         Jesteśmy małopolskim deweloperem z&nbsp;wieloletnim doświadczeniem
         w&nbsp;budownictwie jednorodzinnym. Każdy dom traktujemy indywidualnie –
         bo wiemy, że to nie inwestycja, to dom Twojej rodziny. Stawiamy na
@@ -22,7 +22,7 @@ export default function AboutDeveloperPage() {
         na każdym etapie.
       </p>
 
-      <div className="grid grid-cols-4 gap-0.5 max-w-225 bg-green-pale rounded-sm text-center text-text-dark mb-16">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-0.5 max-w-225 bg-green-pale rounded-sm text-center text-text-dark mb-16">
         <div className="bg-white py-9 px-6 text-center text-text-dark">
           <div className="font-mono text-5xl font-light text-green-deep leading-none text-center">
             14

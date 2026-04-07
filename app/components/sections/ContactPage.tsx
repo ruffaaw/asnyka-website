@@ -8,21 +8,26 @@ export default function ContactPage() {
       className="bg-green-deep flex-col gap-10 scroll-mt-26.5"
     >
       <h1 className="text-[12px] uppercase text-green-light mb-5 flex items-center gap-3 leading-[1.8] tracking-[0.22em] before:content-[''] before:block before:w-9 before:h-px before:bg-green-light">
-        galeria
+        kontakt
       </h1>
 
-      <div className="flex flex-row justify-between">
-        <div className="flex flex-col w-full">
-          <h2 className="font-mono text-[clamp(2rem,3.5vw,3rem)] font-light leading-[1.15] text-white max-w-xs mb-10">
+      <div className="flex flex-col gap-10 md:flex-row md:justify-between md:gap-14">
+        <div className="flex flex-col w-full md:w-[45%]">
+          <h2 className="font-mono text-[clamp(2rem,3.5vw,3rem)] font-light leading-[1.15] text-white max-w-md mb-6">
             Porozmawiajmy o&nbsp;
             <em className="italic text-green-light">Twoim </em>
             domu
           </h2>
+          <p className="text-white text-base leading-[1.8] max-w-xl mb-8">
+            Chętnie pomożemy z ofertą inwestycyjną i formalnościami przed
+            zakupem. W szczególności doradzamy także przy ubezpieczeniu
+            nieruchomości.
+          </p>
 
           <div className="flex flex-col gap-7">
-            <div className="flex gap-4.5 items-center">
-              <div className="w-10.5 h-10.5 border border-[rgba(200,221,200,0.3)] rounded-[50%] flex items-center justify-center shrink-0">
-                <Phone className="w-4.5 h-4.5 stroke-[1.5] stroke-green-light" />
+            <div className="flex gap-4 items-center">
+              <div className="w-11 h-11 border border-[rgba(200,221,200,0.3)] rounded-full flex items-center justify-center shrink-0">
+                <Phone className="w-5 h-5 stroke-[1.5] stroke-green-light" />
               </div>
 
               <div className="flex flex-col gap-1">
@@ -89,7 +94,7 @@ export default function ContactPage() {
         </div>
 
         <div className="flex flex-col gap-4 text-text-dark w-full">
-          <div className="grid grid-cols-[1fr_1fr] gap-4">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             <div className="flex flex-col gap-2">
               <label className="text-[0.75rem] tracking-widest uppercase text-green-light">
                 Imię i nazwisko
@@ -98,7 +103,7 @@ export default function ContactPage() {
                 type="text"
                 id="name"
                 placeholder="Jan Kowalski"
-                className="bg-[rgba(255,255,255,0.07)] border border-[rgba(200,221,200,0.2)] rounded-xs px-4 py-3 text-white text-[0.9rem] outline-none transition-colors duration-200 focus:border-green-light"
+                className="bg-[rgba(255,255,255,0.07)] border border-[rgba(200,221,200,0.2)] rounded-sm px-4 py-3 text-white text-[0.9rem] outline-none transition-colors duration-200 focus:border-green-light"
               />
             </div>
 
@@ -110,7 +115,7 @@ export default function ContactPage() {
                 type="tel"
                 id="phone"
                 placeholder="+48 123 456 789"
-                className="bg-[rgba(255,255,255,0.07)] border border-[rgba(200,221,200,0.2)] rounded-xs px-4 py-3 text-white text-[0.9rem] outline-none transition-colors duration-200 focus:border-green-light"
+                className="bg-[rgba(255,255,255,0.07)] border border-[rgba(200,221,200,0.2)] rounded-sm px-4 py-3 text-white text-[0.9rem] outline-none transition-colors duration-200 focus:border-green-light"
               />
             </div>
           </div>
@@ -123,7 +128,7 @@ export default function ContactPage() {
               type="email"
               id="email"
               placeholder="jan.kowalski@example.com"
-              className="bg-[rgba(255,255,255,0.07)] border border-[rgba(200,221,200,0.2)] rounded-xs px-4 py-3 text-white text-[0.9rem] outline-none transition-colors duration-200 focus:border-green-light"
+              className="bg-[rgba(255,255,255,0.07)] border border-[rgba(200,221,200,0.2)] rounded-sm px-4 py-3 text-white text-[0.9rem] outline-none transition-colors duration-200 focus:border-green-light"
             />
           </div>
 
@@ -133,7 +138,7 @@ export default function ContactPage() {
             </label>
             <select
               id="interest"
-              className="bg-[rgba(255,255,255,0.07)] border border-[rgba(200,221,200,0.2)] rounded-xs px-4 py-3 text-white text-[0.9rem] outline-none transition-colors duration-200 focus:border-green-light"
+              className="bg-[rgba(255,255,255,0.07)] border border-[rgba(200,221,200,0.2)] rounded-sm px-4 py-3 text-white text-[0.9rem] outline-none transition-colors duration-200 focus:border-green-light"
             >
               <option className="bg-green-deep">Opcja 1</option>
               <option className="bg-green-deep">Opcja 2</option>
@@ -148,11 +153,11 @@ export default function ContactPage() {
             <textarea
               id="message"
               placeholder="Chciałbym dowiedzieć się więcej o..."
-              className="bg-[rgba(255,255,255,0.07)] border border-[rgba(200,221,200,0.2)] rounded-xs px-4 py-3 text-white text-[0.9rem] outline-none transition-colors duration-200 focus:border-green-light resize-y min-h-30"
+              className="bg-[rgba(255,255,255,0.07)] border border-[rgba(200,221,200,0.2)] rounded-sm px-4 py-3 text-white text-[0.9rem] outline-none transition-colors duration-200 focus:border-green-light resize-y min-h-[10rem]"
             />
           </div>
 
-          <button className="px-9 py-3.5 bg-green-light text-green-deep border-none cursor-pointer text-[0.82rem] font-medium tracking-widest uppercase rounded-xs self-start transition-colors duration-200 hover:bg-white">
+          <button className="px-9 py-3.5 bg-green-light text-green-deep border-none cursor-pointer text-[0.82rem] font-medium tracking-widest uppercase rounded-sm self-start transition-colors duration-200 hover:bg-white">
             Wyślij zapytanie
           </button>
         </div>

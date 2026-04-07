@@ -17,12 +17,12 @@ export default function GalleryPage() {
   return (
     <SectionWrapper
       id="galeria"
-      className="bg-green-deep flex-col gap-10 scroll-mt-26.5"
+      className="bg-green-deep flex-col scroll-mt-26.25 "
     >
       <h1 className="text-[12px] uppercase text-green-light mb-5 flex items-center gap-3 leading-[1.8] tracking-[0.22em] before:content-[''] before:block before:w-9 before:h-px before:bg-green-light">
         galeria
       </h1>
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-col md:flex-row justify-between gap-6 mb-10">
         <div className="flex items-center">
           <h2 className="font-mono text-[clamp(2rem,3.5vw,3rem)] font-light leading-[1.15] text-white">
             Poczuj{" "}
@@ -62,15 +62,16 @@ export default function GalleryPage() {
                 key={index}
                 className="flex justify-center rounded-lg"
               >
-                <Image
-                  src={src.src}
-                  alt={src.alt}
-                  width={1200}
-                  height={500}
-                  className="rounded-lg shadow-lg object-cover"
-                  unoptimized
-                  quality={100}
-                />
+                <div className="relative w-full aspect-video">
+                  <Image
+                    src={src.src}
+                    alt={src.alt}
+                    fill
+                    className="shadow-lg object-cover"
+                    unoptimized
+                    quality={100}
+                  />
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
