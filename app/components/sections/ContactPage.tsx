@@ -153,7 +153,7 @@ export default function ContactPage() {
             <textarea
               id="message"
               placeholder="Chciałbym dowiedzieć się więcej o..."
-              className="bg-[rgba(255,255,255,0.07)] border border-[rgba(200,221,200,0.2)] rounded-sm px-4 py-3 text-white text-[0.9rem] outline-none transition-colors duration-200 focus:border-green-light resize-y min-h-[10rem]"
+              className="bg-[rgba(255,255,255,0.07)] border border-[rgba(200,221,200,0.2)] rounded-sm px-4 py-3 text-white text-[0.9rem] outline-none transition-colors duration-200 focus:border-green-light resize-y min-h-40"
             />
           </div>
 
