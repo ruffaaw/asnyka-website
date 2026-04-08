@@ -3,10 +3,6 @@
 import SectionWrapper from "../ui/SectionWrapper";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/effect-coverflow";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 export default function GalleryPage() {
   const galleryImages = [
@@ -64,10 +60,7 @@ export default function GalleryPage() {
             className="w-full"
           >
             {galleryImages.map((src, index) => (
-              <SwiperSlide
-                key={index}
-                className="flex justify-center rounded-lg"
-              >
+              <SwiperSlide key={index} className="flex justify-center">
                 <div className="relative w-full aspect-video">
                   <Image
                     src={src.src}
