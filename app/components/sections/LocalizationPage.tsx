@@ -77,7 +77,7 @@ export default function LocalizationPage() {
         </div>
 
         <a
-          href="#domy"
+          href="#lokale"
           className="px-6 sm:px-8 py-3 sm:py-3.5 bg-green-deep text-white no-underline text-[0.82rem] font-medium tracking-widest uppercase rounded-sm
               transition-all duration-200 hover:bg-green-mid hover:-translate-y-px"
         >

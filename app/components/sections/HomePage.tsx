@@ -41,7 +41,7 @@ export default function HomePage() {
 
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 flex-wrap">
             <a
-              href="#domy"
+              href="#lokale"
               className="px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-3.5 bg-green-deep text-white no-underline text-[0.72rem] sm:text-[0.82rem] font-medium tracking-widest uppercase rounded-sm
               transition-all duration-200 hover:bg-green-mid hover:-translate-y-px whitespace-nowrap text-center"
             >
