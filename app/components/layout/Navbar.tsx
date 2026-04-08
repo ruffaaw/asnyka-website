@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <nav className="font-sans bg-white border-b border-green-pale relative z-50">
       <div className="flex px-4 sm:px-10 lg:px-20 py-3.5 justify-between items-center">
-        <div className="flex gap-3 items-center shrink-0">
+        <a href="#home" className="flex gap-3 items-center shrink-0">
           <div className="p-3 bg-green-deep rounded-full">
             <House className="text-cream w-6 h-6" />
           </div>
@@ -31,7 +31,7 @@ export default function Navbar() {
               Osiedle Ekologiczne
             </h2>
           </div>
-        </div>
+        </a>
 
         <ul className="hidden lg:flex gap-6 xl:gap-8 list-none items-center">
           {links.map(({ href, label }) => (
