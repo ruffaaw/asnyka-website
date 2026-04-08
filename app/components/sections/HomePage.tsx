@@ -9,7 +9,7 @@ export default function HomePage() {
     >
       <div className="absolute inset-0 z-0">
         <Image
-          src="/asnyka1.webp"
+          src="/asnyka.webp"
           alt="Osiedle Zielona Polana"
           fill
           className="object-cover"

@@ -10,8 +10,14 @@ import "swiper/css/effect-coverflow";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 export default function GalleryPage() {
   const galleryImages = [
-    // { id: 1, src: "/rzut_kwadratowy.webp", alt: "Widok osiedla" },
-    { id: 2, src: "/asnyka1.webp", alt: "Apartament" },
+    { id: 1, src: "/asnyka.webp", alt: "Zdjęcie osiedla Asnyka" },
+    { id: 2, src: "/z_tylu_dzien.webp", alt: "Zdjęcie z tyłu osiedla Asnyka" },
+    {
+      id: 2,
+      src: "/z_tylu_noc.webp",
+      alt: "Zdjęcie z tyłu osiedla Asnyka w nocy",
+    },
+    { id: 4, src: "/dron.webp", alt: "Zdjęcie z drona osiedla Asnyka" },
   ];
 
   return (
