@@ -1,4 +1,7 @@
+"use client";
+
 import SectionWrapper from "../ui/SectionWrapper";
+import { motion } from "framer-motion";
 
 export default function FinishPage() {
   const items = [
@@ -19,22 +22,73 @@ export default function FinishPage() {
       id="wykonczenie"
       className="bg-white flex-col scroll-mt-26.25"
     >
-      <h1 className="text-[12px] uppercase text-text-mid mb-5 flex items-center gap-3 leading-[1.8] tracking-[0.22em] before:content-[''] before:block before:w-9 before:h-px before:bg-text-mid">
+      <motion.h1
+        className="text-[12px] uppercase text-text-mid mb-5 flex items-center gap-3 leading-[1.8] tracking-[0.22em] before:content-[''] before:block before:w-9 before:h-px before:bg-text-mid"
+        initial={{ opacity: 0, y: -10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-105px" }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+      >
         Wykończenie
-      </h1>
-      <div className="flex flex-col lg:flex-row items-center w-full gap-10 lg:gap-25">
-        <div className="flex flex-col w-full">
-          <h2 className="font-mono text-[clamp(2rem,3.5vw,3rem)] font-light leading-[1.15] text-green-deep mb-6">
+      </motion.h1>
+      <motion.div
+        className="flex flex-col lg:flex-row items-center w-full gap-10 lg:gap-25"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-105px" }}
+        transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+      >
+        <motion.div
+          className="flex flex-col w-full"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-105px" }}
+          transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+        >
+          <motion.h2
+            className="font-mono text-[clamp(2rem,3.5vw,3rem)] font-light leading-[1.15] text-green-deep mb-6"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-105px" }}
+            transition={{ duration: 0.4, delay: 0.3, ease: "easeOut" }}
+          >
             W&nbsp;sercu <em className="italic text-green-mid">Małopolski</em>
-          </h2>
-          <p className="text-text-mid leading-[1.8] max-w-110">
+          </motion.h2>
+          <motion.p
+            className="text-text-mid leading-[1.8] max-w-110"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-105px" }}
+            transition={{ duration: 0.4, delay: 0.4, ease: "easeOut" }}
+          >
             Oferujemy kompleksowe wykończenie wnętrz pod klucz – jeden partner,
             jeden budżet, jeden termin. Ty wybierasz styl, my zajmujemy się
             resztą.
-          </p>
+          </motion.p>
 
-          <div className="flex flex-col gap-0 mt-10">
-            <div className="flex gap-6 pb-9 relative items-center after:content-[''] after:absolute after:left-4.75 after:top-10 after:w-px after:h-[calc(100%-30px)] after:bg-green-pale last:after:hidden">
+          <motion.div
+            className="flex flex-col gap-0 mt-10"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-105px" }}
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.1,
+                  delayChildren: 0.5,
+                },
+              },
+            }}
+          >
+            <motion.div
+              className="flex gap-6 pb-9 relative items-center after:content-[''] after:absolute after:left-4.75 after:top-10 after:w-px after:h-[calc(100%-30px)] after:bg-green-pale last:after:hidden"
+              variants={{
+                hidden: { opacity: 0, x: -20 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
               <div className="w-10 h-10 rounded-[50%] border-[1.5px] border-green-mid flex items-center justify-center font-mono text-base text-green-mid shrink-0 bg-white relative z-1">
                 01
               </div>
@@ -47,9 +101,16 @@ export default function FinishPage() {
                   kolorystyki. Projekt 3D w cenie pakietu.
                 </p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex gap-6 pb-9 relative items-center after:content-[''] after:absolute after:left-4.75 after:top-10 after:w-px after:h-[calc(100%-30px)] after:bg-green-pale last:after:hidden">
+            <motion.div
+              className="flex gap-6 pb-9 relative items-center after:content-[''] after:absolute after:left-4.75 after:top-10 after:w-px after:h-[calc(100%-30px)] after:bg-green-pale last:after:hidden"
+              variants={{
+                hidden: { opacity: 0, x: -20 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
               <div className="w-10 h-10 rounded-[50%] border-[1.5px] border-green-mid flex items-center justify-center font-mono text-base text-green-mid shrink-0 bg-white relative z-1">
                 02
               </div>
@@ -62,9 +123,16 @@ export default function FinishPage() {
                   sanitarne – wszystko w harmonogramie.
                 </p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex gap-6 pb-9 relative items-center after:content-[''] after:absolute after:left-4.75 after:top-10 after:w-px after:h-[calc(100%-30px)] after:bg-green-pale last:after:hidden">
+            <motion.div
+              className="flex gap-6 pb-9 relative items-center after:content-[''] after:absolute after:left-4.75 after:top-10 after:w-px after:h-[calc(100%-30px)] after:bg-green-pale last:after:hidden"
+              variants={{
+                hidden: { opacity: 0, x: -20 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
               <div className="w-10 h-10 rounded-[50%] border-[1.5px] border-green-mid flex items-center justify-center font-mono text-base text-green-mid shrink-0 bg-white relative z-1">
                 03
               </div>
@@ -77,9 +145,16 @@ export default function FinishPage() {
                   Opcjonalnie AGD i smart home.
                 </p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex gap-6 pb-9 relative items-center after:content-[''] after:absolute after:left-4.75 after:top-10 after:w-px after:h-[calc(100%-30px)] after:bg-green-pale last:after:hidden">
+            <motion.div
+              className="flex gap-6 pb-9 relative items-center after:content-[''] after:absolute after:left-4.75 after:top-10 after:w-px after:h-[calc(100%-30px)] after:bg-green-pale last:after:hidden"
+              variants={{
+                hidden: { opacity: 0, x: -20 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
               <div className="w-10 h-10 rounded-[50%] border-[1.5px] border-green-mid flex items-center justify-center font-mono text-base text-green-mid shrink-0 bg-white relative z-1">
                 04
               </div>
@@ -92,27 +167,58 @@ export default function FinishPage() {
                   wykonanie przez 3 lata.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
 
-        <div className="flex flex-col items-start w-full h-full p-12 bg-cream gap-6 border border-green-pale rounded-sm">
-          <h3 className="font-mono text-[1.3rem] text-green-deep">
+        <motion.div
+          className="flex flex-col items-start w-full h-full p-12 bg-cream gap-6 border border-green-pale rounded-sm"
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-105px" }}
+          transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+        >
+          <motion.h3
+            className="font-mono text-[1.3rem] text-green-deep"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-105px" }}
+            transition={{ duration: 0.4, delay: 0.4, ease: "easeOut" }}
+          >
             Standard wykończenia obejmuje
-          </h3>
-          <ul className="flex flex-col gap-3 list-none text-text-dark">
+          </motion.h3>
+          <motion.ul
+            className="flex flex-col gap-3 list-none text-text-dark"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-105px" }}
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.06,
+                  delayChildren: 0.5,
+                },
+              },
+            }}
+          >
             {items.map((item) => (
-              <li
+              <motion.li
                 key={item}
                 className="flex items-center gap-3 text-[0.88rem] text-text-mid leading-normal"
+                variants={{
+                  hidden: { opacity: 0, x: -10 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                transition={{ duration: 0.3 }}
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-green-mid shrink-0" />
                 {item}
-              </li>
+              </motion.li>
             ))}
-          </ul>
-        </div>
-      </div>
+          </motion.ul>
+        </motion.div>
+      </motion.div>
     </SectionWrapper>
   );
 }

@@ -4,6 +4,7 @@ import Image from "next/image";
 import SectionWrapper from "../ui/SectionWrapper";
 import { Heart, House, Truck } from "lucide-react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const houses = [
   {
@@ -150,15 +151,38 @@ export default function HousesPage() {
       id="lokale"
       className="bg-cream flex-col justify-center items-start scroll-mt-26.25 px-4 sm:px-10 lg:px-20 py-16 lg:py-24"
     >
-      <h1 className="text-[12px] uppercase text-text-mid mb-4 flex items-center gap-3 leading-[1.8] tracking-[0.22em] before:content-[''] before:block before:w-9 before:h-px before:bg-text-mid">
+      <motion.h1
+        className="text-[12px] uppercase text-text-mid mb-4 flex items-center gap-3 leading-[1.8] tracking-[0.22em] before:content-[''] before:block before:w-9 before:h-px before:bg-text-mid"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+      >
         oferta
-      </h1>
-      <h2 className="font-mono text-[clamp(1.75rem,3.5vw,3rem)] font-light leading-[1.15] text-green-deep mb-8">
+      </motion.h1>
+      <motion.h2
+        className="font-mono text-[clamp(1.75rem,3.5vw,3rem)] font-light leading-[1.15] text-green-deep mb-8"
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, margin: "-105px" }}
+        transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+      >
         Znajdź swoje <em className="italic text-green-mid">mieszkanie</em>
-      </h2>
+      </motion.h2>
 
-      <div className="hidden lg:grid grid-cols-3 gap-7.5 w-full">
-        <div className="col-span-2 aspect-4/3 relative">
+      <motion.div
+        className="hidden lg:grid grid-cols-3 gap-7.5 w-full"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-105px" }}
+        transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+      >
+        <motion.div
+          className="col-span-2 aspect-4/3 relative"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-105px" }}
+          transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+        >
           <Image
             src="/dron.webp"
             alt="Zdjęcie osiedla Asnyka z rzutu ptaka"
@@ -206,9 +230,22 @@ export default function HousesPage() {
               );
             })}
           </svg>
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col gap-2.5 overflow-y-auto max-h-[90vh] pr-1 scrollbar-thin scrollbar-thumb-green-mid scrollbar-track-green-pale scroll-smooth snap-y snap-mandatory">
+        <motion.div
+          className="flex flex-col gap-2.5 overflow-y-auto max-h-[90vh] pr-1 scrollbar-thin scrollbar-thumb-green-mid scrollbar-track-green-pale scroll-smooth snap-y snap-mandatory"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.08,
+                delayChildren: 0.4,
+              },
+            },
+          }}
+        >
           {houses.map((house) => (
             <HouseCard
               key={house.id}
@@ -217,11 +254,23 @@ export default function HousesPage() {
               onActivate={() => setActiveId(house.id)}
             />
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      <div className="lg:hidden flex flex-col gap-5 w-full">
-        <div className="w-full aspect-4/3 relative overflow-hidden shadow-lg">
+      <motion.div
+        className="lg:hidden flex flex-col gap-5 w-full"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-105px" }}
+        transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+      >
+        <motion.div
+          className="w-full aspect-4/3 relative overflow-hidden shadow-lg"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-105px" }}
+          transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+        >
           <Image
             src="/dron.webp"
             alt="Zdjęcie osiedla Asnyka z rzutu ptaka"
@@ -283,9 +332,22 @@ export default function HousesPage() {
               );
             })}
           </svg>
-        </div>
+        </motion.div>
 
-        <div className="flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory scrollbar-none px-4 sm:-mx-10 sm:px-10">
+        <motion.div
+          className="flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory scrollbar-none px-4 sm:-mx-10 sm:px-10"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.08,
+                delayChildren: 0.45,
+              },
+            },
+          }}
+        >
           {houses.map((house) => (
             <MobileHouseCard
               key={house.id}
@@ -294,8 +356,8 @@ export default function HousesPage() {
               onActivate={() => setActiveId(house.id)}
             />
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </SectionWrapper>
   );
 }
@@ -360,13 +422,19 @@ function HouseCard({
   onActivate: () => void;
 }) {
   return (
-    <div
+    <motion.div
       id={`house-card-${house.id}`}
       onClick={onActivate}
       className={`
         flex flex-col gap-2.5 bg-white border rounded-sm transition-all duration-300 scroll-mt-4
         ${isActive ? "border-green-mid shadow-md ring-1 ring-green-mid/30" : "border-green-pale hover:border-green-mid/50"}
       `}
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      whileHover={{ scale: 1.02 }}
     >
       <div className="flex w-full items-end justify-end pt-3.5 pr-3.5">
         <span
@@ -423,7 +491,7 @@ function HouseCard({
           szczegóły
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -437,7 +505,7 @@ function MobileHouseCard({
   onActivate: () => void;
 }) {
   return (
-    <div
+    <motion.div
       id={`house-card-mobile-${house.id}`}
       onClick={onActivate}
       className={`
@@ -445,6 +513,12 @@ function MobileHouseCard({
         transition-all duration-300 snap-start cursor-pointer
         ${isActive ? "border-green-mid shadow-md ring-1 ring-green-mid/30" : "border-green-pale"}
       `}
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      whileHover={{ scale: 1.05 }}
     >
       <div className="w-full aspect-video relative">
         <Image
@@ -480,6 +554,6 @@ function MobileHouseCard({
           szczegóły
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 }
