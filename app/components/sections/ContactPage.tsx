@@ -5,7 +5,7 @@ export default function ContactPage() {
   return (
     <SectionWrapper
       id="kontakt"
-      className="bg-green-deep flex-col gap-10 scroll-mt-26.5"
+      className="bg-green-deep flex-col gap-10 scroll-mt-26.25"
     >
       <h1 className="text-[12px] uppercase text-green-light mb-5 flex items-center gap-3 leading-[1.8] tracking-[0.22em] before:content-[''] before:block before:w-9 before:h-px before:bg-green-light">
         kontakt

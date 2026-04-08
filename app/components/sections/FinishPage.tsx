@@ -17,7 +17,7 @@ export default function FinishPage() {
   return (
     <SectionWrapper
       id="wykonczenie"
-      className="bg-white flex-col scroll-mt-26.5"
+      className="bg-white flex-col scroll-mt-26.25"
     >
       <h1 className="text-[12px] uppercase text-text-mid mb-5 flex items-center gap-3 leading-[1.8] tracking-[0.22em] before:content-[''] before:block before:w-9 before:h-px before:bg-text-mid">
         Wykończenie

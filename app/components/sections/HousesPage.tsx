@@ -31,7 +31,7 @@ export default function HousesPage() {
   return (
     <SectionWrapper
       id="lokale"
-      className="bg-cream flex-col justify-center items-start scroll-mt-26.5 px-4 sm:px-10 lg:px-20 py-16 lg:py-24"
+      className="bg-cream flex-col justify-center items-start scroll-mt-26.25 px-4 sm:px-10 lg:px-20 py-16 lg:py-24"
     >
       <h1 className="text-[12px] uppercase text-text-mid mb-4 flex items-center gap-3 leading-[1.8] tracking-[0.22em] before:content-[''] before:block before:w-9 before:h-px before:bg-text-mid">
         oferta

@@ -4,7 +4,7 @@ export default function AboutDeveloperPage() {
   return (
     <SectionWrapper
       id="o-deweloperze"
-      className="bg-cream-dark flex-col items-center scroll-mt-26.5"
+      className="bg-cream-dark flex-col items-center scroll-mt-26.25"
     >
       <h1 className="text-base uppercase text-text-mid mb-5 flex items-center gap-3 leading-[1.8] tracking-[0.22em] before:content-[''] before:block before:w-9 before:h-px before:bg-text-mid">
         o deweloperze
