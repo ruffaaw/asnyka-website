@@ -137,6 +137,8 @@ const AREA_COLORS = {
 export default function HousesPage() {
   const [activeId, setActiveId] = useState<string | null>(null);
 
+  const [hoveredId, setHoveredId] = useState<string | null>(null);
+
   function scrollToCard(id: string) {
     const el = document.getElementById(`house-card-${id}`);
     el?.scrollIntoView({ behavior: "smooth", block: "nearest" });
@@ -173,11 +175,15 @@ export default function HousesPage() {
           >
             {houses.map((house) => {
               const colors = AREA_COLORS[house.status];
-              const isActive = activeId === house.id;
+              const isActive = activeId === house.id || hoveredId === house.id;
               const pts = house.points.map((p) => p.join(",")).join(" ");
 
               return (
-                <g key={house.id}>
+                <g
+                  key={house.id}
+                  onMouseEnter={() => setHoveredId(house.id)}
+                  onMouseLeave={() => setHoveredId(null)}
+                >
                   <polygon
                     points={pts}
                     fill={isActive ? colors.fillActive : colors.fill}
@@ -187,19 +193,6 @@ export default function HousesPage() {
                     onClick={(e) => {
                       e.stopPropagation();
                       scrollToCard(house.id);
-                    }}
-                    onMouseEnter={(e) => {
-                      (e.target as SVGPolygonElement).setAttribute(
-                        "fill",
-                        colors.fillActive,
-                      );
-                    }}
-                    onMouseLeave={(e) => {
-                      if (activeId !== house.id)
-                        (e.target as SVGPolygonElement).setAttribute(
-                          "fill",
-                          colors.fill,
-                        );
                     }}
                   />
                   <PolygonLabel
@@ -244,10 +237,15 @@ export default function HousesPage() {
           >
             {houses.map((house) => {
               const colors = AREA_COLORS[house.status];
-              const isActive = activeId === house.id;
+              const isActive = activeId === house.id || hoveredId === house.id;
               const pts = house.points.map((p) => p.join(",")).join(" ");
               return (
-                <g key={house.id}>
+                <g
+                  key={house.id}
+                  onMouseEnter={() => setHoveredId(house.id)}
+                  onMouseLeave={() => setHoveredId(null)}
+                >
+                  {" "}
                   <polygon
                     points={pts}
                     fill={isActive ? colors.fillActive : colors.fill}
@@ -324,13 +322,13 @@ function PolygonLabel({
         ? "rgba(180,40,40,1)"
         : "rgba(107,79,58,1)";
   return (
-    <g onClick={onClick} style={{ cursor: "pointer" }}>
+    <g onClick={onClick} className="cursor-pointer">
       <circle
         cx={cx}
         cy={cy}
-        r="1.5"
+        r="2"
         fill={isActive ? color : "white"}
-        fillOpacity="0.9"
+        fillOpacity="0.75"
         style={{ transition: "all 0.2s ease-in-out" }}
       />
       <text
@@ -338,11 +336,11 @@ function PolygonLabel({
         y={cy}
         textAnchor="middle"
         dominantBaseline="central"
-        fontSize="1"
+        fontSize="1.5"
         fontWeight="600"
         fill={isActive ? "white" : color}
+        className="font-sans"
         style={{
-          fontFamily: "var(--font-mono, monospace)",
           userSelect: "none",
         }}
       >
