@@ -9,7 +9,7 @@ export default function AboutDeveloperPage() {
       className="bg-cream-dark flex-col items-center scroll-mt-26.25"
     >
       <motion.h1
-        className="..."
+        className="text-[12px] uppercase text-text-mid mb-5 flex items-center gap-3 leading-[1.8] tracking-[0.22em] before:content-[''] before:block before:w-9 before:h-px before:bg-text-mid"
         initial={{ opacity: 0, y: -10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-105px" }}

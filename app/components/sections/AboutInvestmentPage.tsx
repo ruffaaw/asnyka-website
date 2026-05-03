@@ -1,6 +1,6 @@
 "use client";
 
-import { House, Shield, SolarPanel, UsersRound } from "lucide-react";
+import { Fence, Home, TreeDeciduous, Users } from "lucide-react";
 import SectionWrapper from "../ui/SectionWrapper";
 import Image from "next/image";
 import { useState } from "react";
@@ -49,11 +49,11 @@ export default function AboutInvestmentPage() {
             viewport={{ once: true, margin: "-105px" }}
             transition={{ duration: 0.4, delay: 0.3, ease: "easeOut" }}
           >
-            Asnyka to wyjątkowe osiedle 24 domów jednorodzinnych położonych na
-            skraju lasu, 18&nbsp;km od centrum Krakowa. Każdy dom zaprojektowano
-            z&nbsp;myślą o&nbsp;jak najniższym wpływie na środowisko – z użyciem
-            ekologicznych materiałów, technologii odzysku ciepła
-            i&nbsp;inteligentnych systemów zarządzania energią.
+            Asnyka to kameralna inwestycja 6 lokali mieszkalnych położona blisko
+            centrum Krakowa. Każde mieszkanie zostało zaprojektowane z myślą o
+            funkcjonalności i&nbsp;jak najniższym wpływie na środowisko – z
+            użyciem ekologicznych materiałów, systemów odzysku ciepła oraz
+            inteligentnego zarządzania energią.
           </motion.p>
 
           <motion.p
@@ -63,10 +63,10 @@ export default function AboutInvestmentPage() {
             viewport={{ once: true, margin: "-105px" }}
             transition={{ duration: 0.4, delay: 0.4, ease: "easeOut" }}
           >
-            Osiedle otacza zieleń – naturalne łąki, alejki spacerowe i&nbsp;mały
-            staw tworzą przestrzeń, w&nbsp;której wypoczynek staje się
-            codziennością. To miejsce dla rodzin ceniących spokój, świeże
-            powietrze i&nbsp;kontakt z&nbsp;przyrodą.
+            Inwestycję otacza zieleń – naturalne łąki, alejki spacerowe
+            i&nbsp;strefy rekreacji, które tworzą przyjazne tło do codziennego
+            wypoczynku. To idealne miejsce dla osób i rodzin ceniących spokój,
+            komfort i bliski dostęp do centrum.
           </motion.p>
 
           <motion.div
@@ -86,30 +86,26 @@ export default function AboutInvestmentPage() {
           >
             {[
               {
-                icon: <House className="w-9 h-9 text-green-mid stroke-[1.5]" />,
-                title: "Energooszczędne domy",
-                desc: "Standard A+ z\u00a0rekuperacją i\u00a0pompą ciepła w\u00a0każdym budynku",
+                icon: <Users className="w-9 h-9 text-green-mid stroke-[1.5]" />,
+                title: "Kameralny charakter",
+                desc: "6 lokali — intymna, kameralna inwestycja",
+              },
+              {
+                icon: <Home className="w-9 h-9 text-green-mid stroke-[1.5]" />,
+                title: "Funkcjonalne układy",
+                desc: "Przemyślane, ergonomiczne rozkłady mieszkań",
               },
               {
                 icon: (
-                  <UsersRound className="w-9 h-9 text-green-mid stroke-[1.5]" />
+                  <TreeDeciduous className="w-9 h-9 text-green-mid stroke-[1.5]" />
                 ),
-                title: "Kameralna społeczność",
-                desc: "Zaledwie 24 domy – wybrana, spokojna sąsiedzka przestrzeń",
+                title: "Dolne mieszkania z ogródkami",
+                desc: "Parterowe lokale z prywatnymi ogródkami",
               },
               {
-                icon: (
-                  <Shield className="w-9 h-9 text-green-mid stroke-[1.5]" />
-                ),
-                title: "Naturalne materiały",
-                desc: "Drewno, kamień i\u00a0szkło – estetyka wynikająca z\u00a0otoczenia",
-              },
-              {
-                icon: (
-                  <SolarPanel className="w-9 h-9 text-green-mid stroke-[1.5]" />
-                ),
-                title: "Panele fotowoltaiczne",
-                desc: "Instalacja PV 6\u00a0kWp w\u00a0standardzie każdego domu",
+                icon: <Fence className="w-9 h-9 text-green-mid stroke-[1.5]" />,
+                title: "Górne mieszkania z balkonami",
+                desc: "Duże, funkcjonalne balkony — idealne do wypoczynku",
               },
             ].map(({ icon, title, desc }) => (
               <motion.div
@@ -132,7 +128,7 @@ export default function AboutInvestmentPage() {
         </div>
 
         <div className="flex w-full lg:w-1/2 h-full relative isolate justify-center mt-8 lg:mt-0">
-          <motion.div
+          {/* <motion.div
             className="absolute z-10 top-0 left-0 -ml-4 sm:-ml-6 sm:mt-6 -mt-6 border border-green-pale rounded-sm flex flex-col py-4 px-5 bg-white w-fit justify-center items-center shadow-sm"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -140,12 +136,12 @@ export default function AboutInvestmentPage() {
             transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
           >
             <p className="font-mono text-3xl sm:text-4xl text-green-deep font-light">
-              18&nbsp;km
+              Blisko
             </p>
             <p className="uppercase text-xs font-medium text-text-light">
-              od centrum krakowa
+              centrum Krakowa
             </p>
-          </motion.div>
+          </motion.div> */}
 
           <motion.div
             className="relative w-full h-auto aspect-4/3 overflow-hidden bg-black"

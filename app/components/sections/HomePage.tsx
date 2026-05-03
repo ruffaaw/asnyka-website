@@ -60,10 +60,10 @@ export default function HomePage() {
             viewport={{ once: true, margin: "-105px" }}
             transition={{ duration: 0.4, delay: 0.3, ease: "easeOut" }}
           >
-            Osiedle Zielona Polana to 24 domy jednorodzinne otoczone lasem
-            i&nbsp;łąkami. Zaprojektowane z&nbsp;myślą o&nbsp;harmonii człowieka
-            z&nbsp;przyrodą – z&nbsp;poszanowaniem środowiska i&nbsp;Twojego
-            komfortu.
+            Osiedle Asnyka to kameralna inwestycja 6 lokali mieszkalnych
+            położona blisko centrum. Projekt wyróżniają funkcjonalne układy,
+            dolne mieszkania z&nbsp;ogródkiem oraz górne mieszkania
+            z&nbsp;dużymi, wygodnymi balkonami.
           </motion.p>
 
           <motion.div

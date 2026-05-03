@@ -4,6 +4,9 @@ import SectionWrapper from "../ui/SectionWrapper";
 import { motion } from "framer-motion";
 
 export default function ContactPage() {
+  const mapSrc =
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3200.1930357422184!2d20.0704331!3d49.9832493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47164165c9638e0b%3A0x1865b13ffbf5586e!2sAdama%20Asnyka%2022%2C%2032-020%20Wieliczka!5e1!3m2!1spl!2spl!4v1777821026358!5m2!1spl!2spl";
+
   return (
     <SectionWrapper
       id="kontakt"
@@ -139,7 +142,7 @@ export default function ContactPage() {
                   Adres biura
                 </span>
                 <span className="text-white text-base">
-                  ul. Leśna 12, 32-080 Zabierzów
+                  ul. Adama Asnyka 22, 32-020 Wieliczka
                 </span>
               </div>
             </motion.div>
@@ -289,6 +292,28 @@ export default function ContactPage() {
             Wyślij zapytanie
           </motion.button>
         </motion.div>
+      </motion.div>
+      <motion.div
+        className="mt-8 overflow-hidden rounded-sm border border-[rgba(200,221,200,0.2)] bg-[rgba(255,255,255,0.04)]"
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-105px" }}
+        transition={{ duration: 0.4, delay: 0.9, ease: "easeOut" }}
+      >
+        <div className="flex items-center justify-between gap-3 px-4 py-3 border-b border-[rgba(200,221,200,0.2)]">
+          <p className="text-[0.75rem] uppercase tracking-widest text-green-light">
+            Mapa lokalizacji
+          </p>
+        </div>
+        <div className="relative w-full aspect-16/7 bg-black">
+          <iframe
+            title="Mapa Google lokalizacji Asnyka"
+            src={mapSrc}
+            className="absolute inset-0 h-full w-full"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
       </motion.div>
     </SectionWrapper>
   );

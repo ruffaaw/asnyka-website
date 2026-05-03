@@ -1,31 +1,69 @@
 "use client";
 import Image from "next/image";
 import SectionWrapper from "../ui/SectionWrapper";
-import { Building2, Cross, School, Trees } from "lucide-react";
+import { Building2, Cross, School, Trees, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function LocalizationPage() {
   const distances = [
     {
       icon: <Building2 className="w-5 h-5 stroke-green-mid shrink-0" />,
-      label: "Centrum Krakowa",
-      value: "~18 km / 22 min",
+      label: "Przystanki autobusowe",
+      value: "1 min",
     },
     {
       icon: <School className="w-5 h-5 stroke-green-mid shrink-0" />,
-      label: "Szkoła podstawowa",
-      value: "1,2 km / 4 min",
+      label: "Szkoły",
+      value: "5 min",
+    },
+    {
+      icon: <School className="w-5 h-5 stroke-green-mid shrink-0" />,
+      label: "Przedszkola",
+      value: "5 min",
+    },
+    {
+      icon: <Building2 className="w-5 h-5 stroke-green-mid shrink-0" />,
+      label: "Sklepy",
+      value: "5 min",
     },
     {
       icon: <Cross className="w-5 h-5 stroke-green-mid shrink-0" />,
-      label: "Ośrodek zdrowia",
-      value: "2,4 km / 7 min",
+      label: "Urzędy",
+      value: "10 min",
     },
     {
-      icon: <Trees className="w-5 h-5 stroke-green-mid shrink-0" />,
-      label: "Las i ścieżki przyrodnicze",
-      value: "200 m / 3 min",
+      icon: <Building2 className="w-5 h-5 stroke-green-mid shrink-0" />,
+      label: "Rynek i restauracje",
+      value: "w zasięgu spaceru",
     },
+  ];
+
+  const markers = [
+    { id: "stops", left: "36%", top: "70%", label: "Przystanki autobusowe" },
+    { id: "investment", left: "40.5%", top: "62%", label: "Inwestycja" },
+    { id: "school", left: "13%", top: "43%", label: "Szkoła podstawowa" },
+    {
+      id: "school2",
+      left: "90%",
+      top: "18%",
+      label: "Technikum i szkoła branżowa",
+    },
+    {
+      id: "kindergarden",
+      left: "38.5%",
+      top: "83%",
+      label: "Przedszkole",
+    },
+    {
+      id: "kindergarden2",
+      left: "77%",
+      top: "39%",
+      label: "Przedszkole",
+    },
+    { id: "shops", left: "20%", top: "76%", label: "Sklep" },
+    { id: "offices", left: "3%", top: "56.5%", label: "Urząd" },
+    { id: "market", left: "89%", top: "26.5%", label: "Restauracja" },
+    { id: "market2", left: "83.5%", top: "72%", label: "Restauracja" },
   ];
 
   return (
@@ -35,12 +73,34 @@ export default function LocalizationPage() {
     >
       {/* Map image */}
       <motion.div
-        className="relative flex items-center justify-center aspect-square w-full max-w-sm sm:max-w-md lg:max-w-2xl shrink-0"
+        className="relative flex items-center justify-center aspect-4/3 w-full lg:w-1/2 shrink-0"
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, margin: "-105px" }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
+        {/* <div className="absolute z-20 top-4 left-4 bg-green-deep text-white px-3 py-2 rounded-sm text-xs font-medium">
+          Wszystko w zasięgu spaceru — większość miejsc w 5 minut lub mniej
+        </div> */}
+
+        {markers.map(({ id, left, top, label }) => (
+          <button
+            key={id}
+            aria-label={label}
+            className="absolute z-30 flex flex-col items-center -translate-x-1/2 -translate-y-1/2"
+            style={{ left, top }}
+            onClick={() => {}}
+            type="button"
+          >
+            <span className="bg-white border border-green-deep rounded-full p-1 shadow-sm">
+              <MapPin className="w-4 h-4 text-green-deep stroke-[1.5]" />
+            </span>
+            <span className="mt-1 text-[11px] bg-white/90 text-text-mid px-2 py-0.5 rounded-sm whitespace-nowrap shadow-sm">
+              {label}
+            </span>
+          </button>
+        ))}
+
         <Image
           src="/localization.jpg"
           alt="Zdjęcie lokalizacji osiedla Asnyka"
