@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 export default function FinishPage() {
   const items = [
     "Ogrzewanie podłogowe na parterze i piętrze",
-    "Rekuperacja z wymiennikiem gruntowym",
     "Pompa ciepła powietrze-woda (COP ≥ 4)",
     "Instalacja fotowoltaiczna 6 kWp + magazyn energii",
     "Zbiornik na deszczówkę do nawadniania ogrodu",
