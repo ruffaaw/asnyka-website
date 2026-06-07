@@ -23,6 +23,12 @@ const houses = [
       [44.1, 70.5],
       [37, 68],
     ] as [number, number][],
+    areaPolygonLabel: [
+      [36.4, 59.3],
+      [44, 61],
+      [44.1, 70.5],
+      [37, 68],
+    ] as [number, number][],
   },
   {
     id: "1b",
@@ -35,6 +41,13 @@ const houses = [
     price: "799 000 zł",
     src: "/asnyka1.webp",
     points: [
+      [36.2, 55.5],
+      [40, 52],
+      [44, 57],
+      [44, 61],
+      [36.4, 59.3],
+    ] as [number, number][],
+    areaPolygonLabel: [
       [36.2, 55.5],
       [40, 52],
       [44, 57],
@@ -58,6 +71,12 @@ const houses = [
       [52, 73.5],
       [44.1, 70.5],
     ] as [number, number][],
+    areaPolygonLabel: [
+      [44, 61],
+      [52, 63],
+      [52, 73.5],
+      [44.1, 70.5],
+    ] as [number, number][],
   },
   {
     id: "2b",
@@ -70,6 +89,13 @@ const houses = [
     price: "799 000 zł",
     src: "/asnyka1.webp",
     points: [
+      [44, 57],
+      [48, 53.9],
+      [52, 59],
+      [52, 63],
+      [44, 61],
+    ] as [number, number][],
+    areaPolygonLabel: [
       [44, 57],
       [48, 53.9],
       [52, 59],
@@ -90,6 +116,14 @@ const houses = [
     points: [
       [52, 63],
       [61.3, 65.5],
+      [67.5, 59],
+      [67.4, 67.6],
+      [61.3, 76.5],
+      [52, 73.5],
+    ] as [number, number][],
+    areaPolygonLabel: [
+      [52, 63],
+      [61.3, 65.5],
       [61.3, 76.5],
       [52, 73.5],
     ] as [number, number][],
@@ -105,6 +139,15 @@ const houses = [
     price: "799 000 zł",
     src: "/asnyka1.webp",
     points: [
+      [52, 59],
+      [56.9, 55.6],
+      [61.3, 61.5],
+      [67.6, 55.5],
+      [67.5, 59],
+      [61.3, 65.5],
+      [52, 63],
+    ] as [number, number][],
+    areaPolygonLabel: [
       [52, 59],
       [56.9, 55.6],
       [61.3, 61.5],
@@ -220,7 +263,7 @@ export default function HousesPage() {
                     }}
                   />
                   <PolygonLabel
-                    points={house.points}
+                    points={house.areaPolygonLabel}
                     label={house.id.toUpperCase()}
                     isActive={isActive}
                     status={house.status}
@@ -313,7 +356,7 @@ export default function HousesPage() {
                     }}
                   />
                   <PolygonLabel
-                    points={house.points}
+                    points={house.areaPolygonLabel}
                     label={house.id.toUpperCase()}
                     isActive={isActive}
                     status={house.status}
