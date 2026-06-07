@@ -10,11 +10,12 @@ export default function GalleryPage() {
     { id: 1, src: "/asnyka.webp", alt: "Zdjęcie osiedla Asnyka" },
     { id: 2, src: "/z_tylu_dzien.webp", alt: "Zdjęcie z tyłu osiedla Asnyka" },
     {
-      id: 2,
+      id: 3,
       src: "/z_tylu_noc.webp",
       alt: "Zdjęcie z tyłu osiedla Asnyka w nocy",
     },
     { id: 4, src: "/dron.webp", alt: "Zdjęcie z drona osiedla Asnyka" },
+    { id: 5, src: "/asnyka1.webp", alt: "Zdjęcie tyłu z dołu" },
   ];
 
   return (
