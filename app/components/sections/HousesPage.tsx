@@ -12,11 +12,12 @@ const houses = [
     status: "Zarezerwowany" as const,
     statusColor: "text-[#6B4F3A] border-[#6B4F3A]",
     name: "Mieszkanie numer 1a",
-    area: "132 m²",
+    area: "78,80 m²",
     plot: "Działka 600 m²",
-    rooms: "4 pokoje",
+    rooms: "3 pokoje",
     price: "799 000 zł",
-    src: "/asnyka1.webp",
+    src: "/Asnyka_wnetrze_parter.png",
+    src2: "/Asnyka_wnetrze_pietro_z_dolem.png",
     points: [
       [36.4, 59.3],
       [44, 61],
@@ -35,11 +36,12 @@ const houses = [
     status: "Dostępny" as const,
     statusColor: "text-green-mid border-green-mid",
     name: "Mieszkanie numer 1b",
-    area: "132 m²",
+    area: "96,20 m²",
     plot: "Działka 600 m²",
-    rooms: "4 pokoje",
+    rooms: "5 pokoi",
     price: "799 000 zł",
-    src: "/asnyka1.webp",
+    src: "/Asnyka_wnetrze_pietro_z_gora.png",
+    src2: "/Asnyka_wnetrze_poddasze.png",
     points: [
       [36.2, 55.5],
       [40, 52],
@@ -60,11 +62,12 @@ const houses = [
     status: "Sprzedany" as const,
     statusColor: "text-red-700 border-red-400",
     name: "Mieszkanie numer 2a",
-    area: "132 m²",
+    area: "78,80 m²",
     plot: "Działka 600 m²",
-    rooms: "4 pokoje",
+    rooms: "3 pokoje",
     price: "799 000 zł",
-    src: "/asnyka1.webp",
+    src: "/Asnyka_wnetrze_parter.png",
+    src2: "/Asnyka_wnetrze_pietro_z_dolem.png",
     points: [
       [44, 61],
       [52, 63],
@@ -83,11 +86,12 @@ const houses = [
     status: "Dostępny" as const,
     statusColor: "text-green-mid border-green-mid",
     name: "Mieszkanie numer 2b",
-    area: "132 m²",
+    area: "96,20 m²",
     plot: "Działka 600 m²",
-    rooms: "4 pokoje",
+    rooms: "5 pokoi",
     price: "799 000 zł",
-    src: "/asnyka1.webp",
+    src: "/Asnyka_wnetrze_pietro_z_gora.png",
+    src2: "/Asnyka_wnetrze_poddasze.png",
     points: [
       [44, 57],
       [48, 53.9],
@@ -108,11 +112,12 @@ const houses = [
     status: "Zarezerwowany" as const,
     statusColor: "text-[#6B4F3A] border-[#6B4F3A]",
     name: "Mieszkanie numer 3a",
-    area: "132 m²",
+    area: "78,80 m²",
     plot: "Działka 600 m²",
-    rooms: "4 pokoje",
+    rooms: "3 pokoje",
     price: "799 000 zł",
-    src: "/asnyka1.webp",
+    src: "/Asnyka_wnetrze_parter.png",
+    src2: "/Asnyka_wnetrze_pietro_z_dolem.png",
     points: [
       [52, 63],
       [61.3, 65.5],
@@ -133,11 +138,12 @@ const houses = [
     status: "Dostępny" as const,
     statusColor: "text-green-mid border-green-mid",
     name: "Mieszkanie numer 3b",
-    area: "132 m²",
+    area: "96,20 m²",
     plot: "Działka 600 m²",
-    rooms: "4 pokoje",
+    rooms: "5 pokoi",
     price: "799 000 zł",
-    src: "/asnyka1.webp",
+    src: "/Asnyka_wnetrze_pietro_z_gora.png",
+    src2: "/Asnyka_wnetrze_poddasze.png",
     points: [
       [52, 59],
       [56.9, 55.6],
@@ -477,7 +483,6 @@ function HouseCard({
         visible: { opacity: 1, y: 0 },
       }}
       transition={{ duration: 0.4, ease: "easeOut" }}
-      whileHover={{ scale: 1.02 }}
     >
       <div className="flex w-full items-end justify-end pt-3.5 pr-3.5">
         <span
@@ -487,15 +492,27 @@ function HouseCard({
         </span>
       </div>
 
-      <div className="w-full aspect-video relative">
-        <Image
-          src={house.src}
-          alt={house.name}
-          fill
-          className="object-cover"
-          unoptimized
-          quality={100}
-        />
+      <div className="grid w-full grid-cols-2 gap-2 p-3">
+        <div className="relative aspect-4/3 overflow-hidden rounded-xs bg-[#f7f2e9]">
+          <Image
+            src={house.src}
+            alt={house.name}
+            fill
+            className="object-contain p-2"
+            unoptimized
+            quality={100}
+          />
+        </div>
+        <div className="relative aspect-4/3 overflow-hidden rounded-xs bg-[#f7f2e9]">
+          <Image
+            src={house.src2}
+            alt={house.name}
+            fill
+            className="object-contain"
+            unoptimized
+            quality={100}
+          />
+        </div>
       </div>
 
       <div className="flex flex-col p-5 sm:p-6 gap-2.5">
@@ -508,10 +525,10 @@ function HouseCard({
             <House className="w-3.5 h-3.5 stroke-1 stroke-green-mid" />
             <p className="text-sm font-light text-text-light">{house.area}</p>
           </div>
-          <div className="flex flex-row gap-1.5 items-center">
+          {/* <div className="flex flex-row gap-1.5 items-center">
             <Truck className="w-3.5 h-3.5 stroke-1 stroke-green-mid" />
             <p className="text-sm font-light text-text-light">{house.plot}</p>
-          </div>
+          </div> */}
           <div className="flex flex-row gap-1.5 items-center">
             <Heart className="w-3.5 h-3.5 stroke-1 stroke-green-mid" />
             <p className="text-sm font-light text-text-light">{house.rooms}</p>
@@ -526,7 +543,8 @@ function HouseCard({
         </div>
 
         <a
-          href=""
+          href={`/rzuty/asnyka_${house.id}.pdf`}
+          target="_blank"
           className="px-6 sm:px-8 py-3 sm:py-3.5 bg-green-deep text-white no-underline text-[0.82rem] font-medium tracking-widest uppercase rounded-xs
           transition-all duration-200 hover:bg-green-mid hover:-translate-y-px w-fit"
           onClick={(e) => e.stopPropagation()}
@@ -563,15 +581,27 @@ function MobileHouseCard({
       transition={{ duration: 0.4, ease: "easeOut" }}
       whileHover={{ scale: 1.05 }}
     >
-      <div className="w-full aspect-video relative">
-        <Image
-          src={house.src}
-          alt={house.name}
-          fill
-          className="object-cover"
-          unoptimized
-          quality={100}
-        />
+      <div className="grid w-full grid-cols-2 gap-2 p-3">
+        <div className="relative aspect-4/3 overflow-hidden rounded-xs bg-[#f7f2e9]">
+          <Image
+            src={house.src}
+            alt={house.name}
+            fill
+            className="object-contain p-2"
+            unoptimized
+            quality={100}
+          />
+        </div>
+        <div className="relative aspect-4/3 overflow-hidden rounded-xs bg-[#f7f2e9]">
+          <Image
+            src={house.src2}
+            alt={house.name}
+            fill
+            className="object-contain"
+            unoptimized
+            quality={100}
+          />
+        </div>
       </div>
       <div className="flex flex-col p-3 gap-1.5">
         <div className="flex items-start justify-between gap-2">
@@ -589,7 +619,8 @@ function MobileHouseCard({
         </p>
 
         <a
-          href=""
+          href={`/rzuty/asnyka_${house.id}.pdf`}
+          target="_blank"
           className="mt-1 px-4 py-2 bg-green-deep text-white no-underline text-[0.7rem] font-medium tracking-widest uppercase rounded-xs
           transition-all duration-200 hover:bg-green-mid w-fit"
           onClick={(e) => e.stopPropagation()}
