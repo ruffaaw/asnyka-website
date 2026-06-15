@@ -493,7 +493,7 @@ function HouseCard({
       </div>
 
       <div className="grid w-full grid-cols-2 gap-2 p-3">
-        <div className="relative aspect-4/3 overflow-hidden rounded-xs bg-[#f7f2e9]">
+        <div className="relative aspect-4/3 overflow-hidden rounded-xs">
           <Image
             src={house.src}
             alt={house.name}
@@ -503,7 +503,7 @@ function HouseCard({
             quality={100}
           />
         </div>
-        <div className="relative aspect-4/3 overflow-hidden rounded-xs bg-[#f7f2e9]">
+        <div className="relative aspect-4/3 overflow-hidden rounded-xs">
           <Image
             src={house.src2}
             alt={house.name}
@@ -582,7 +582,7 @@ function MobileHouseCard({
       whileHover={{ scale: 1.05 }}
     >
       <div className="grid w-full grid-cols-2 gap-2 p-3">
-        <div className="relative aspect-4/3 overflow-hidden rounded-xs bg-[#f7f2e9]">
+        <div className="relative aspect-4/3 overflow-hidden rounded-xs">
           <Image
             src={house.src}
             alt={house.name}
@@ -592,7 +592,7 @@ function MobileHouseCard({
             quality={100}
           />
         </div>
-        <div className="relative aspect-4/3 overflow-hidden rounded-xs bg-[#f7f2e9]">
+        <div className="relative aspect-4/3 overflow-hidden rounded-xs">
           <Image
             src={house.src2}
             alt={house.name}
