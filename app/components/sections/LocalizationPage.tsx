@@ -87,15 +87,21 @@ export default function LocalizationPage() {
           <button
             key={id}
             aria-label={label}
-            className="absolute z-30 flex flex-col items-center -translate-x-1/2 -translate-y-1/2"
+            className={`absolute z-30 flex flex-col items-center -translate-x-1/2 -translate-y-1/2 ${id === "investment" ? "scale-110 sm:scale-125" : ""}`}
             style={{ left, top }}
             onClick={() => {}}
             type="button"
           >
-            <span className="bg-white border border-green-deep rounded-full p-1 shadow-sm">
-              <MapPin className="w-4 h-4 text-green-deep stroke-[1.5]" />
+            <span
+              className={`bg-white border border-green-deep rounded-full shadow-sm ${id === "investment" ? "p-1.5" : "p-1"}`}
+            >
+              <MapPin
+                className={`text-green-deep stroke-[1.5] ${id === "investment" ? "w-5 h-5" : "w-4 h-4"}`}
+              />
             </span>
-            <span className="mt-1 text-[11px] bg-white/90 text-text-mid px-2 py-0.5 rounded-sm whitespace-nowrap shadow-sm">
+            <span
+              className={`mt-1 bg-white/90 text-text-mid px-2 py-0.5 rounded-sm whitespace-nowrap shadow-sm ${id === "investment" ? "text-[12px] font-medium" : "text-[11px]"}`}
+            >
               {label}
             </span>
           </button>
@@ -146,7 +152,7 @@ export default function LocalizationPage() {
           viewport={{ once: true, margin: "-105px" }}
           transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
         >
-          Asnyka, gm. Zabierzów
+          Asnyka, gm. Wieliczka
         </motion.h3>
 
         <motion.p
@@ -156,7 +162,7 @@ export default function LocalizationPage() {
           viewport={{ once: true, margin: "-105px" }}
           transition={{ duration: 0.4, delay: 0.3, ease: "easeOut" }}
         >
-          woj. małopolskie • 32-080 Zabierzów
+          ul. Adama Asnyka 22, 32-020 Wieliczka
         </motion.p>
 
         <motion.div

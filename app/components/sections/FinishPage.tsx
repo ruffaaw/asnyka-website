@@ -6,14 +6,11 @@ import { motion } from "framer-motion";
 export default function FinishPage() {
   const items = [
     "Ogrzewanie podłogowe na parterze i piętrze",
-    "Pompa ciepła powietrze-woda (COP ≥ 4)",
     "Instalacja fotowoltaiczna 6 kWp + magazyn energii",
-    "Zbiornik na deszczówkę do nawadniania ogrodu",
     "Drzwi zewnętrzne antywłamaniowe RC3",
     "Okna 3-szybowe z profilem ciepłym",
     "Elewacja z tynkiem silikonowym + elementy drewniane",
     "Garaż jednostanowiskowy lub podjazd utwardzony",
-    "Ogrodzenie działki z furtką i bramą automatyczną",
   ];
 
   return (

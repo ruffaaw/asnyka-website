@@ -50,7 +50,7 @@ export default function AboutInvestmentPage() {
             transition={{ duration: 0.4, delay: 0.3, ease: "easeOut" }}
           >
             Asnyka to kameralna inwestycja 6 lokali mieszkalnych położona blisko
-            centrum Krakowa. Każde mieszkanie zostało zaprojektowane z myślą o
+            centrum Wieliczki. Każde mieszkanie zostało zaprojektowane z myślą o
             funkcjonalności i&nbsp;jak najniższym wpływie na środowisko – z
             użyciem ekologicznych materiałów, systemów odzysku ciepła oraz
             inteligentnego zarządzania energią.
@@ -63,10 +63,10 @@ export default function AboutInvestmentPage() {
             viewport={{ once: true, margin: "-105px" }}
             transition={{ duration: 0.4, delay: 0.4, ease: "easeOut" }}
           >
-            Inwestycję otacza zieleń – naturalne łąki, alejki spacerowe
-            i&nbsp;strefy rekreacji, które tworzą przyjazne tło do codziennego
-            wypoczynku. To idealne miejsce dla osób i rodzin ceniących spokój,
-            komfort i bliski dostęp do centrum.
+            Inwestycja zapewnia szybki dostęp do najważniejszych punktów miasta,
+            usług i komunikacji. To idealne miejsce dla osób i rodzin, które
+            chcą łączyć wygodę codziennego życia z mieszkaniem w dobrze
+            skomunikowanej lokalizacji.
           </motion.p>
 
           <motion.div

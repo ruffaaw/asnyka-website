@@ -8,16 +8,18 @@ export default function Header() {
         <Instagram className="w-3.5 h-3.5 stroke-2" />
       </div>
 
-      <p className="hidden md:block text-center">
+      {/* <p className="hidden md:block text-center">
         Znajdź nas: Asnyka - Osiedle Ekologiczne
-      </p>
+      </p> */}
 
       <div className="flex flex-row gap-1.5 sm:gap-3.5 items-center shrink-0">
         <Phone className="w-3.5 h-3.5 stroke-2" />
         <p className="hidden sm:block">
-          Skontaktuj się z nami: +48 111 111 111
+          Skontaktuj się z nami: <a href="tel:+48124333878">+48 12 433 38 78</a>
         </p>
-        <p className="sm:hidden">+48 111 111 111</p>
+        <p className="sm:hidden">
+          <a href="tel:+48124333878">+48 12 433 38 78</a>
+        </p>
       </div>
     </header>
   );

@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import SectionWrapper from "../ui/SectionWrapper";
 import { motion } from "framer-motion";
 
@@ -25,9 +26,25 @@ export default function AboutDeveloperPage() {
         viewport={{ once: true, margin: "-105px" }}
         transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
       >
-        Polana Invest&nbsp;
+        FS BUDOWNICTWO&nbsp;
         <em className="italic text-green-mid">Sp.&nbsp;z&nbsp;o.o.</em>
       </motion.h2>
+      <motion.div
+        className="mb-8 flex justify-center"
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-105px" }}
+        transition={{ duration: 0.4, delay: 0.15, ease: "easeOut" }}
+      >
+        <Image
+          src="/logoDeveloper.png"
+          alt="Logo FS Budownictwo"
+          width={220}
+          height={72}
+          className="h-auto w-45 sm:w-55"
+          priority={false}
+        />
+      </motion.div>
       <motion.p
         className="text-base text-text-mid leading-[1.8] max-w-155 text-center mb-10"
         initial={{ opacity: 0, y: 10 }}

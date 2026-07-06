@@ -91,8 +91,18 @@ export default function ContactPage() {
                   Telefon
                 </span>
                 <span className="text-white text-base">
-                  <a href="tel:+48123456789" className="hover:text-green-pale">
-                    +48 123 456 789
+                  <a href="tel:+48124333878" className="hover:text-green-pale">
+                    +48 12 433 38 78
+                  </a>
+                </span>
+                <span className="text-white text-base">
+                  <a href="tel:+48790557504" className="hover:text-green-pale">
+                    +48 790 557 504
+                  </a>
+                </span>
+                <span className="text-white text-base">
+                  <a href="tel:+48790557057" className="hover:text-green-pale">
+                    +48 790 557 057
                   </a>
                 </span>
               </div>
@@ -116,10 +126,10 @@ export default function ContactPage() {
                 </span>
                 <span className="text-white text-base">
                   <a
-                    href="mailto:biuro@zielonapolana.pl"
+                    href="mailto:biuro@N20.pl"
                     className="hover:text-green-pale"
                   >
-                    biuro@zielonapolana.pl
+                    biuro@N20.pl
                   </a>
                 </span>
               </div>
@@ -142,7 +152,7 @@ export default function ContactPage() {
                   Adres biura
                 </span>
                 <span className="text-white text-base">
-                  ul. Adama Asnyka 22, 32-020 Wieliczka
+                  Plac Wolnica 13/21, 31-060 Kraków
                 </span>
               </div>
             </motion.div>
@@ -163,8 +173,10 @@ export default function ContactPage() {
                 <span className="text-[0.72rem] tracking-[0.12em] uppercase text-green-light">
                   Godziny otwarcia
                 </span>
-                <span className="text-white text-base">Pon–Pt: 9:00–17:00</span>
-                <span className="text-white text-base">Sob: 10:00–14:00</span>
+                <span className="text-white text-base">
+                  Pon–Czw: 8:00–18:00
+                </span>
+                <span className="text-white text-base">Pt: 8:00–16:00</span>
               </div>
             </motion.div>
           </motion.div>

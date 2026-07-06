@@ -65,7 +65,7 @@ export default function GalleryPage() {
             transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
           >
             Naturalne materiały, panoramiczne przeszklenia i&nbsp;zieleń tuż za
-            progiem – tak wygląda codzienność na Zielonej Polanie.
+            progiem – tak wygląda codzienność na Asnyka.
           </motion.p>
         </div>
       </motion.div>

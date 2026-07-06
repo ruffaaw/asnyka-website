@@ -48,7 +48,7 @@ export default function HomePage() {
           >
             Żyj blisko
             <br />
-            <em className="italic text-green-mid">natury,</em>
+            <em className="italic text-green-mid">centrum,</em>
             <br />
             dalej od zgiełku
           </motion.h2>
