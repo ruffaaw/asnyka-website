@@ -38,8 +38,8 @@ export default function AboutInvestmentPage() {
             viewport={{ once: true, margin: "-105px" }}
             transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
           >
-            Osiedle stworzone z&nbsp;
-            <em className="italic text-green-mid">szacunkiem</em> dla natury
+            Osiedle stworzone z myślą o&nbsp;
+            <em className="italic text-green-mid">mieszkańcach</em>
           </motion.h2>
 
           <motion.p
@@ -51,9 +51,7 @@ export default function AboutInvestmentPage() {
           >
             Asnyka to kameralna inwestycja 6 lokali mieszkalnych położona blisko
             centrum Wieliczki. Każde mieszkanie zostało zaprojektowane z myślą o
-            funkcjonalności i&nbsp;jak najniższym wpływie na środowisko – z
-            użyciem ekologicznych materiałów, systemów odzysku ciepła oraz
-            inteligentnego zarządzania energią.
+            funkcjonalności i&nbsp;komforcie mieszkańców.
           </motion.p>
 
           <motion.p

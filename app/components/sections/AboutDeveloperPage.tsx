@@ -26,7 +26,7 @@ export default function AboutDeveloperPage() {
         viewport={{ once: true, margin: "-105px" }}
         transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
       >
-        FS BUDOWNICTWO&nbsp;
+        FS DEWELOPER&nbsp;
         <em className="italic text-green-mid">Sp.&nbsp;z&nbsp;o.o.</em>
       </motion.h2>
       <motion.div
@@ -52,15 +52,15 @@ export default function AboutDeveloperPage() {
         viewport={{ once: true, margin: "-105px" }}
         transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
       >
-        Jesteśmy małopolskim deweloperem z&nbsp;wieloletnim doświadczeniem
-        w&nbsp;budownictwie jednorodzinnym. Każdy dom traktujemy indywidualnie –
-        bo wiemy, że to nie inwestycja, to dom Twojej rodziny. Stawiamy na
-        jakość materiałów, rzetelność wykonania i&nbsp;transparentną współpracę
-        na każdym etapie.
+        Jesteśmy lokalnym, małopolskim deweloperem z&nbsp;wieloletnim
+        doświadczeniem w&nbsp;budownictwie jednorodzinnym. Każdą inwestycję
+        traktujemy jako osobny projekt, bo wiemy, że dla naszych klientów to
+        przede wszystkim miejsce do codziennego życia. Stawiamy na funkcjonalne
+        rozwiązania, solide wykonanie i&nbsp;jasną komunikację na każdym etapie.
       </motion.p>
 
       <motion.div
-        className="grid grid-cols-1 lg:grid-cols-4 gap-0.5 max-w-225 bg-green-pale rounded-sm text-center text-text-dark mb-16"
+        className="grid grid-cols-1 lg:grid-cols-3 gap-0.5 max-w-300 bg-green-pale rounded-sm text-center text-text-dark"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-105px" }}
@@ -83,7 +83,7 @@ export default function AboutDeveloperPage() {
           transition={{ duration: 0.4, ease: "easeOut" }}
         >
           <div className="font-mono text-5xl font-light text-green-deep leading-none text-center">
-            14
+            7
           </div>
           <div className="text-[0.78rem] tracking-widest uppercase text-text-light mt-2">
             Lat na rynku
@@ -99,10 +99,10 @@ export default function AboutDeveloperPage() {
           transition={{ duration: 0.4, ease: "easeOut" }}
         >
           <div className="font-mono text-5xl font-light text-green-deep leading-none text-center">
-            180+
+            12
           </div>
           <div className="text-[0.78rem] tracking-widest uppercase text-text-light mt-2">
-            Zrealizowanych domów
+            zrealizowanych, przeprowadzonych i&nbsp;przygotowanych inwestycji
           </div>
         </motion.div>
 
@@ -115,14 +115,14 @@ export default function AboutDeveloperPage() {
           transition={{ duration: 0.4, ease: "easeOut" }}
         >
           <div className="font-mono text-5xl font-light text-green-deep leading-none text-center">
-            98%{" "}
+            13 000 + m<sup>2</sup> PUM
           </div>
           <div className="text-[0.78rem] tracking-widest uppercase text-text-light mt-2">
-            Zadowolonych klientów
+            w zrealizowanych, trwających i&nbsp;przygotowywanych inwestycjach
           </div>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           className="bg-white py-9 px-6 text-center text-text-dark"
           variants={{
             hidden: { opacity: 0, scale: 0.9 },
@@ -136,10 +136,10 @@ export default function AboutDeveloperPage() {
           <div className="text-[0.78rem] tracking-widest uppercase text-text-light mt-2">
             Aktywne inwestycje
           </div>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
 
-      <motion.div
+      {/* <motion.div
         className="flex justify-center gap-6 flex-wrap"
         initial="hidden"
         whileInView="visible"
@@ -213,7 +213,7 @@ export default function AboutDeveloperPage() {
           <span className="w-1.5 h-1.5 rounded-full bg-green-mid shrink-0" />
           Obsługa posprzedażowa
         </motion.span>
-      </motion.div>
+      </motion.div> */}
     </SectionWrapper>
   );
 }

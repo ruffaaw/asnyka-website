@@ -23,7 +23,7 @@ export default function Home() {
         <GalleryPage />
         <LocalizationPage />
         <HousesPage />
-        <FinishPage />
+        {/* <FinishPage /> */}
         <AboutDeveloperPage />
         <ContactPage />
         <Footer />

@@ -36,7 +36,7 @@ export default function HomePage() {
             viewport={{ once: true, margin: "-105px" }}
             transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
           >
-            Nowa inwestycja • Małopolska
+            Nowa inwestycja • Wieliczka
           </motion.h1>
 
           <motion.h2

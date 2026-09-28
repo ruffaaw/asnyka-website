@@ -54,9 +54,7 @@ export default function ContactPage() {
             viewport={{ once: true, margin: "-105px" }}
             transition={{ duration: 0.4, delay: 0.4, ease: "easeOut" }}
           >
-            Chętnie pomożemy z ofertą inwestycyjną i formalnościami przed
-            zakupem. W szczególności doradzamy także przy ubezpieczeniu
-            nieruchomości.
+            Chętnie odpowiemy na Twoje pytania
           </motion.p>
 
           <motion.div

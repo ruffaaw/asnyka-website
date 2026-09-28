@@ -56,7 +56,7 @@ export default function GalleryPage() {
           </motion.h2>
         </div>
 
-        <div className="flex items-end">
+        {/* <div className="flex items-end">
           <motion.p
             className="text-base leading-[1.8] text-green-pale max-w-md"
             initial={{ opacity: 0, x: 20 }}
@@ -67,7 +67,7 @@ export default function GalleryPage() {
             Naturalne materiały, panoramiczne przeszklenia i&nbsp;zieleń tuż za
             progiem – tak wygląda codzienność na Asnyka.
           </motion.p>
-        </div>
+        </div> */}
       </motion.div>
 
       <motion.div

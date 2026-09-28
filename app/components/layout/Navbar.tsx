@@ -10,7 +10,7 @@ export default function Navbar() {
     { href: "#galeria", label: "Galeria" },
     { href: "#lokalizacja", label: "Lokalizacja" },
     { href: "#lokale", label: "Lokale" },
-    { href: "#wykonczenie", label: "Wykończenie" },
+    // { href: "#wykonczenie", label: "Wykończenie" },
     { href: "#o-deweloperze", label: "O deweloperze" },
     { href: "#kontakt", label: "Kontakt" },
   ];
@@ -30,10 +30,10 @@ export default function Navbar() {
           </div>
           <div>
             <h1 className="font-mono font-semibold text-green-deep text-[22px] leading-tight">
-              Asnyka
+              Asnyka 22
             </h1>
             <h2 className="text-xs uppercase text-green-mid tracking-wide">
-              Osiedle Ekologiczne
+              Osiedle w sercu Wieliczki
             </h2>
           </div>
         </motion.a>
